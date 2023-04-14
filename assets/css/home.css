@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+.upload-card {
+  width: 50%;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.display-card {
+  clear: both;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border: 0.2rem dashed #43b257;
+  margin: 1rem;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f6fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload-table {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.table-body {
+  text-align: center;
+}
+.table-head {
+  padding: 1rem 0;
+}
+.csv-img,
+.view-file-image {
+  width: 2rem;
+}
+.uploaded-files {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.table-head,
+.table-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.table-row {
+  text-align: center;
+}
+
+.btn,
+.sort {
+  padding: 1rem;
+  background-color: #43b257;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.search-tab {
+  width: 100%;
+  height: 2rem;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+.search-tab:focus {
+  outline: none;
+  border: 0.1rem solid #43b257;
+}
+.table,
+th,
+td {
+  border: 0.1rem solid #ababab;
+  padding: 1rem;
+}
+.sort {
+  margin: 1rem;
+}
+
+.container {
+  width: 100%;
+}

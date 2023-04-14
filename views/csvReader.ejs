@@ -1,0 +1,33 @@
+<div class="display-card">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>CSV File: <%= fileData.filename %>
+                </h1>
+                <input type="text" id="search" placeholder="Search..." class="search-tab">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <% fileData.header_row.forEach(function(cell, index) { %>
+                                <th>
+                                    <%= cell %><button class="sort" id="<%= index %>" data-order="desc">↓</button>
+                                </th>
+                                <% }); %>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% fileData.data_rows.forEach(function(row) { %>
+                            <tr>
+                                <% Object.values(row).forEach(function(cell) { %>
+                                    <td>
+                                        <%= cell %>
+                                    </td>
+                                    <% }); %>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

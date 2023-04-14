@@ -1,0 +1,38 @@
+<div class="upload-card">
+    <form action="/upload" method="post" enctype="multipart/form-data" class="form">
+        <div class="form-group">
+            <label for="csvFile">Select a CSV file to upload:</label>
+            <input type="file" class="form-control-file" id="csvFile" name="csv" accept=".csv">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+
+    <h1>Uploaded Files</h1>
+
+    <div class="upload-table">
+
+        <div class="table-body">
+            <div class="table-head">
+                <div class="table-file-type">File Type</div>
+                <div class="table-file-name">Name</div>
+                <div class="table-file-view">View</div>
+            </div>
+            <% files.forEach(function(file) { %>
+
+                <div class="uploaded-files">
+                    <div class="table-row">
+                        <div class="table-file-type"><img
+                                src="https://static-00.iconduck.com/assets.00/csv-icon-448x512-rkoi7crs.png"
+                                alt="csv-file-img" class="csv-img"></div>
+                        <div class="table-file-name">
+                            <%= file.filename %>
+                        </div>
+                        <div class="table-file-view"><a href="/view/<%= file._id %>"><img
+                                    src="https://icons.veryicon.com/png/o/internet--web/billion-square-cloud/file-view.png"
+                                    alt="view-file" class="view-file-image"></a></div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+</div>

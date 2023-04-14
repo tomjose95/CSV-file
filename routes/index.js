@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
+const homeController = require("./../controllers/home_Controller");
+console.log("index Router Loaded :>> ");
+router.get("/", homeController.home);
+router.get("/view/:id", homeController.view);
+router.post("/upload", upload.single("csv"), homeController.upload);
+module.exports = router;
